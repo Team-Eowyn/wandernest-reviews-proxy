@@ -12,11 +12,11 @@ app.use('/api/hotels', createProxyMiddleware({target: 'http://ec2-18-220-158-65.
 app.use('/api/hotels/:id', createProxyMiddleware({target: 'http://ec2-18-220-158-65.us-east-2.compute.amazonaws.com:3001', changeOrigin: true}));
 
 // BOOKINGS
-app.use('/api/bookings/:id', createProxyMiddleware({target: 'http://localhost:3002', changeOrigin: true}));
-app.use('/api/bookings', createProxyMiddleware({target: 'http://localhost:3002', changeOrigin: true}));
+app.use('/api/bookings/:id', createProxyMiddleware({target: 'http://ec2-18-191-247-25.us-east-2.compute.amazonaws.com:3002', changeOrigin: true}));
+app.use('/api/bookings', createProxyMiddleware({target: 'http://ec2-18-191-247-25.us-east-2.compute.amazonaws.com:3002', changeOrigin: true}));
 
 // ABOUT
-app.use('/about/:id', createProxyMiddleware({target: 'http://localhost:3003', changeOrigin: true}));
+app.use('/about/:id', createProxyMiddleware({target: 'http://ec2-3-135-240-238.us-east-2.compute.amazonaws.com:3003', changeOrigin: true}));
 
 // REVIEWS
 app.use('/roomtips', createProxyMiddleware({target: 'http://ec2-54-153-71-183.us-west-1.compute.amazonaws.com:3004', changeOrigin: true}));
