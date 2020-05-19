@@ -23,6 +23,9 @@ app.use('/roomtips', createProxyMiddleware({target: 'http://ec2-54-153-71-183.us
 app.use('/qas', createProxyMiddleware({target: 'http://ec2-54-153-71-183.us-west-1.compute.amazonaws.com:3004', changeOrigin: true}));
 app.use('/reviews', createProxyMiddleware({target: 'http://ec2-54-153-71-183.us-west-1.compute.amazonaws.com:3004', changeOrigin: true}));
 
+// HEADER
+app.use('/header/:id', createProxyMiddleware({ target: 'http://ec2-3-135-240-27.us-east-2.compute.amazonaws.com:3005'}));
+
 /*
 // PHOTOCAROUSEL
 app.use('/api/hotels', createProxyMiddleware({target: 'http://localhost:3001', changeOrigin: true}));
